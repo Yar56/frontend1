@@ -1,20 +1,15 @@
 include ../utils/mixins
 block variables
 
+
 doctype html
-html(lang='en')
+html(lang='ru-RU')
   head
     meta(charset='utf-8')
-    title #{title}
-    meta(name="description", content=description)
-    block head
+    meta(http-equiv='X-UA-Compatible', content="IE = edge")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title= title
+  body
+    block UIKit
 
-  body(class=pageClass)
-    .wrapper
-      #app
-        include ../includes/modules/header
-        .content-wrapper
-          block content
-        include ../includes/modules/footer
 
-    block script

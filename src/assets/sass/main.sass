@@ -4,16 +4,20 @@
 @import 'utils/reset'
 @import 'utils/libs'
 
+.icon
+  position: absolute
+  margin: 30px 0 0 30px
+
 html
   line-height: $mainLineHeight
   font-size: $mainFontSize
   color: $mainFontColor
   height: 100%
   @media screen and (max-width: $desktopWidth)
-    font-size: 16px
-  @media screen and (max-width: $tableWidth)
+    font-size: 19px
+  @media screen and (max-width: $tabletWidth)
     font-size: 15px
-  @media screen and (max-width: $phoneWidth)
+  @media screen and (max-width: $mobileL)
     font-size: 14px
 
 body
@@ -42,13 +46,13 @@ ul, li
 
 section, .section
   position: relative
-  padding: 40px 0
+  padding: 145px 0
   @media screen and (max-width: $desktopWidth)
-    padding: 36px 0
+    padding: 145px 0
   @media screen and (max-width: $desktopWidth)
-    padding: 28px 0
+    padding: 145px 0
   @media screen and (max-width: $desktopWidth)
-    padding: 20px 0
+    padding: 145px 0
 
 .wrapper
   display: flex
@@ -61,20 +65,29 @@ section, .section
   flex-direction: column
   min-height: 100vh
 
-.container
-  width: 1100px
-  flex: 0 0 auto
-  position: relative
-  margin: 0 auto
-  max-width: $desktopWidth
-  @media screen and (max-width: $smDesktopWidth)
-    max-width: $tableWidth
-  @media screen and (max-width: $tableWidth)
-    max-width: $phoneWidth
-  @media screen and (max-width: $phoneWidth)
-    max-width: $smPhoneWidth
+
 
 
 
 // Modules
 @import '../../pug/includes/modules/ColorAndType/C&T'
+
+
+.container
+  //flex: 0 0 auto
+  //position: relative
+  margin: 0 auto
+  @media screen and (min-width: 2560px)
+    max-width: 2000px
+  @media screen and (max-width: $desktopWidth)
+    max-width: 1100px
+  @media screen and (min-width: 769px) and (max-width: 1025px)
+    max-width: 850px
+  @media screen and (max-width: $tabletWidth)
+    max-width: 600px
+  @media screen and (max-width: $mobileL)
+    max-width: $mobileM
+  @media screen and (max-width: $mobileM)
+    max-width: $mobileS
+  @media screen and (max-width: $mobileS)
+    max-width: 280px

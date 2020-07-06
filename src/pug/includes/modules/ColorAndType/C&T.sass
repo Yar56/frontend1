@@ -1,5 +1,65 @@
+@import './src/assets/sass/utils/vars'
+@mixin headline
+
 .color-type
-	grid-auto-columns: 50% 50%
+	width: 100%
+	display: flex
+	justify-content: space-between
 	.color-block
+		display: grid
+		grid-row-gap: 20px
+		min-width: 270px
+		.color-block__item
+			display: grid
+			grid-template-columns: 40% auto
+			.color-block__color
+				width: 70px
+				height: 70px
+				border-radius: 6px
+				&_dark100
+					background-color: $darkShade100
+				&_dark75
+					background-color: $darkShade75
+				&_dark50
+					background-color: $darkShade50
+				&_dark25
+					background-color: $darkShade25
+				&_dark5
+					background-color: $darkShade5
+				&_purple
+					background-color: $purple
+				&_green
+					background-color: $green
+			.color-block__descr
+				line-height: 28.5px
+			.text-descr
+				display: flex
+				flex-direction: column
+				justify-content: center
+				font-size: $mainFontSize
+				.text-descr__hex
+					font-size: 16px
+	.headline-block
+		display: grid
+		grid-template-rows: 60px 48px 15px 48px
+		grid-row-gap: 50px
+		.headline-block__head
+			text-align: right
+			padding-right: 30px
+		.headline-block__item
+			display: grid
+			grid-template-columns: 20% auto
+			max-width: 403px
+			&_H1
+				font-size: 24px
+				font-weight: 700
 
+			&_H2
+				font-size: 19px
+				font-weight: 700
 
+			&_H3
+				font-size: 12px
+				font-weight: 700
+			&_Body
+				font-size: 14px

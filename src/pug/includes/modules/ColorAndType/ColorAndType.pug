@@ -1,25 +1,30 @@
 
-
-mixin color(name, color)
+mixin color(name, colorName, modi)
         div.color-block__item
-            div.color-block__color= color
+            div.color-block__color(class=modi)
             div.color-block__descr.text-descr
                 p.text-descr__descr= name
-                span.text-descr__hex
-mixin headlne(h, text)
-        div.headline-block__item
-            div.headline-block__head= h
-            div.headline-block__descr= text
+                span.text-descr__hex= colorName
+mixin headlne(h, text,  modification)
+        div.headline-block__item(class=modification)
+            div.headline-block__head=h
+            div.headline-block__descr=text
+
+
 div.color-type
     div.color-block
-        +color('dark shade 100%', '#1F2041')
-        +color('Dark Shade 75%', '#1F2041')
-        +color('Dark Shade 50%', '#1F2041')
-        +color('Dark Shade 25%', '#1F2041')
-        +color('Dark Shade 5%', '#1F2041')
-        +color('Purple', '#BC9CFF')
-        +color('Green', '#6FCF97')
+        +color('Dark shade 100%', '#1F2041', 'color-block__color_dark100')
+        +color('Dark Shade 75%', '#1F2041','color-block__color_dark75')
+        +color('Dark Shade 50%', '#1F2041','color-block__color_dark50')
+        +color('Dark Shade 25%', '#1F2041','color-block__color_dark25')
+        +color('Dark Shade 5%', '#1F2041','color-block__color_dark5')
+        +color('Purple', '#BC9CFF','color-block__color_purple')
+        +color('Green', '#6FCF97','color-block__color_green')
     div.headline-block
-        +headlne('h1', '[f[f[f[f[')
+        +headlne('H1', 'This one is the sub-section or widget title', 'headline-block__item_H1')
+        +headlne('H2', 'Next one is the item title inside widgets', 'headline-block__item_H2')
+        +headlne('H3', 'This is a label or CTA text', 'headline-block__item_H3')
+        +headlne('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+            'headline-block__item_Body')
 
 

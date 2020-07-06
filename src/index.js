@@ -8,4 +8,4 @@ import './assets/sass/main.sass'
 // import './assets/css/main.css'
 
 // jquery
-import $ from 'jquery';
+import $ from 'jquery'

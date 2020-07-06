@@ -1,0 +1,19 @@
+.textField-default
+	max-width: 320px
+	display: grid
+	grid-template-rows: 15px 44px
+	grid-row-gap: 5px
+	margin-bottom: 20px
+	.block-descr
+		display: flex
+		font-size: 12px
+		text-transform: uppercase
+		justify-content: space-between
+		height: 15px
+		padding-top: 2px
+		&__text
+			font-weight: bold
+		&__type
+			color: rgba(31, 32, 65, 0.5)
+	&__input
+		@include textFieldInput(1px solid rgba(31, 32, 65, 0.25), 14px, 18px)

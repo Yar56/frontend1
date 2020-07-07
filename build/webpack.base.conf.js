@@ -70,7 +70,7 @@ module.exports = {
       }
     }, 
     {
-      test: /\.s[a]ss$/,
+      test: /\.s[ca]ss$/,
       use: [
         'style-loader',
         MiniCssExtractPlugin.loader,

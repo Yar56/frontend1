@@ -1,0 +1,19 @@
+.block-dropDown
+	@extend .textField-default
+	.dropDown-blockDescr
+		@extend .block-descr
+	.dropDown-default
+		@include textFieldInput(1px solid rgba(31, 32, 65, 0.25),14px, '')
+		padding: 0
+		.dropdown
+			display: grid
+			grid-template-rows: 40px
+			grid-template-columns: 81% auto
+			align-items: center
+			&__label
+				font-family: $addFontRegular
+				color: $darkShade75
+				margin-left: 6%
+			&__icon
+				justify-self: center
+				align-self: center

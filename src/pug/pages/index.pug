@@ -1,8 +1,9 @@
 extends ../layout/main
 
+
 block variables
   - var title = 'Frontend'
-  - var color = '#fffff'
+
 block UIKit
   +icon
   section
@@ -13,5 +14,6 @@ block FormElements
   +icon
   section
     .container
-      include ../includes/modules/FormElements/FormElements
+      block elements
+        include ../includes/modules/FormElements/FormElements
 
